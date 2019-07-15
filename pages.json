@@ -1,0 +1,127 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/wx",
+			 "style": {  
+        "navigationBarTitleText":"",
+		 "navigationBarBackgroundColor":"#33CC99",
+        "app-plus": {  
+            "titleNView": {				
+				"buttons":[{
+					"text":"我的",
+					"fontSize":"18px",			
+					 "width" : "25%"														
+					
+				},{
+					"text":"视频",
+					"fontSize":"18px",				
+					 "width" : "25%"  
+				},{
+					"text":"聊天",
+					"fontSize":"18px",				
+					 "width" : "25%"  
+				},{
+					"text":"新闻",
+					"fontSize":"18px",					
+					 "width" : "25%"  
+				}]
+			},
+			"subNVues":[{
+				"id":"detail",
+				"path":"pages/index/subNVue/detail",
+				"type":"popup",
+				"style": {
+                        "position": "dock",
+                        "margin":"auto",                       
+						"height":"40%",
+						"width":"100%",
+						"bottom":"0px",
+						"mask":"rgba(255,255,255)",
+						"z-index":999
+                    }
+			}]
+				
+			
+        }  
+    }  
+									
+		},
+		
+		{
+			"path": "pages/index/music"	,			 
+			 "style":{
+				"navigationBarTitleText":"音乐"	,
+				"navigationBarBackgroundColor":"#99FFFF"
+				
+				
+			}
+		},
+		{
+			"path": "pages/index/my",			 
+			 "style":{
+				"navigationBarTitleText":"我的"	,
+				"navigationBarBackgroundColor":"#99FFFF"
+				
+				
+			}
+		},
+		{
+			"path": "pages/index/mydeo",			 
+			 "style":{
+				"navigationBarTitleText":"小工具"	,
+				"navigationBarBackgroundColor":"#99FFFF"
+				
+				
+			}
+		},
+		
+		{
+			"path":"pages/index/login",
+			"style":{
+				"navigationBarTitleText":"登录",
+				"navigationBarBackgroundColor":"#0099FF"
+			}
+		},
+		
+		{
+			"path":"pages/index/wx_xq",
+			"style":{
+				"navigationBarTitleText":"新闻详情",
+				"navigationBarBackgroundColor":"#99FFFF"
+			}
+		}
+		
+		
+		
+		
+	],
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#007AFF",
+		"borderStyle": "black",
+		"backgroundColor": "#33CC99",
+		"list": [{
+				"pagePath": "pages/index/wx",				
+				"text": "生活"
+			},{
+				"pagePath":"pages/index/music",
+				"text":"音乐"
+				
+			}
+		]
+	},
+	"condition" : { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "", //模式名称
+				"path": "", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
+	}
+		
+	
+	
+	
+}

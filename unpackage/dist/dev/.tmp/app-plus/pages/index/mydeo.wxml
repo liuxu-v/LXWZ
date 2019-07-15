@@ -1,0 +1,1 @@
+<view><view data-event-opts="{{[['tap',[['wz',['$event']]]]]}}" class="dh" bindtap="__e"><text>位置信息</text><uni-icon class="ic" vue-id="1" type="forward" size="30" bind:__l="__l"></uni-icon></view></view>

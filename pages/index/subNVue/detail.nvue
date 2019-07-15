@@ -1,0 +1,42 @@
+<template>
+	
+	<view >
+		
+		<view>
+			<text>分享至</text>
+		</view>	
+			<view>
+				<text>微信好友</text><text class="aa"></text>
+				<text>朋友圈</text>
+			</view>
+				
+		
+	</view>
+</template>
+
+<script>
+	
+	
+	export default {
+		
+		data() {
+			return {
+				
+			}
+		},
+		
+		methods: {
+			
+		}
+	}
+</script>
+
+<style>
+.aa{
+	width: 48upx;
+	height:48upx;
+	background: url(../../../static/wx.ico);
+}
+
+	
+</style>

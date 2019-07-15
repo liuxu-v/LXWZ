@@ -1,0 +1,47 @@
+{
+  "navigationBarTitleText": "",
+  "navigationBarBackgroundColor": "#33CC99",
+  "titleNView": {
+    "buttons": [
+      {
+        "text": "我的",
+        "fontSize": "18px",
+        "width": "25%"
+      },
+      {
+        "text": "视频",
+        "fontSize": "18px",
+        "width": "25%"
+      },
+      {
+        "text": "聊天",
+        "fontSize": "18px",
+        "width": "25%"
+      },
+      {
+        "text": "新闻",
+        "fontSize": "18px",
+        "width": "25%"
+      }
+    ]
+  },
+  "subNVues": [
+    {
+      "id": "detail",
+      "path": "pages/index/subNVue/detail",
+      "type": "popup",
+      "style": {
+        "position": "dock",
+        "margin": "auto",
+        "height": "40%",
+        "width": "100%",
+        "bottom": "0px",
+        "mask": "rgba(255,255,255)",
+        "z-index": 999
+      }
+    }
+  ],
+  "usingComponents": {
+    "uni-popup": "/components/uni-popup/uni-popup"
+  }
+}

@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"dh{ background: #FF766A; }\n.",[1],"dh wx-text{ display: inline-block; width: 80%; padding: 5px; padding-left: 15px; }\n.",[1],"ic{ width: 20%; }\n",],undefined,{path:"./pages/index/mydeo.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/index/mydeo.wxml') } }));
