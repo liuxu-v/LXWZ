@@ -8,7 +8,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -17,16 +17,25 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 var _default =
 {
   onLoad: function onLoad() {
-    this.ull = plus.storage.getItem("xq");
+    var _this = this;
+    uni.getStorage({
+      key: "xq",
+      success: function success(res) {
+        _this.ull = res.data;
+      } });
+
   },
   onReady: function onReady() {
-    plus.storage.removeItem('xq');
+    uni.removeStorage({
+      key: "xq" });
+
   },
   data: function data() {
     return {
       ull: '' };
 
   } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 
 /***/ }),
 

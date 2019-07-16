@@ -7,10 +7,18 @@
 <script>
 	export default {
 		onLoad() {
-		this.ull=plus.storage.getItem("xq")
+			var _this=this
+			uni.getStorage({
+				key:"xq",
+				success(res){
+					_this.ull=res.data					
+				}
+			})		
 		},
 		onReady: () => {
-			plus.storage.removeItem('xq')
+			uni.removeStorage({
+				key:"xq"
+			})			
 		},
 		data:function(){
 			return{

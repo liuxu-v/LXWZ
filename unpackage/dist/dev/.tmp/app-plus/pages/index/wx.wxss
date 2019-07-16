@@ -1,5 +1,5 @@
 
-.hv{
+.hv {
 	background: red;
 }
 .wx_btn {
@@ -155,28 +155,28 @@
 	font-size: 40rpx;
 	color: #fff;
 }
-.textFlow{
-	-webkit-animation:textfl 15s linear 0s infinite normal;
-	        animation:textfl 15s linear 0s infinite normal;
-	-webkit-animation-play-state:running;
-	        animation-play-state:running;
+.textFlow {
+	-webkit-animation: textfl 15s linear 0s infinite normal;
+	        animation: textfl 15s linear 0s infinite normal;
+	-webkit-animation-play-state: running;
+	        animation-play-state: running;
 	-webkit-animation-fill-mode: backwards;
 	        animation-fill-mode: backwards;
 	position: relative;
 }
-@-webkit-keyframes textfl{
-0%{
-		bottom:0;
+@-webkit-keyframes textfl {
+0% {
+		bottom: 0;
 }
-100%{
+100% {
 		bottom: 100%;
 }
 }
-@keyframes textfl{
-0%{
-		bottom:0;
+@keyframes textfl {
+0% {
+		bottom: 0;
 }
-100%{
+100% {
 		bottom: 100%;
 }
 }

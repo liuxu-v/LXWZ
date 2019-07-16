@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/index/wx",
+    "pages/index/music",
+    "pages/index/my",
+    "pages/index/mydeo",
+    "pages/index/login",
+    "pages/index/wx_xq"
+  ],
+  "subPackages": [],
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#007AFF",
+    "borderStyle": "black",
+    "backgroundColor": "#33CC99",
+    "list": [
+      {
+        "pagePath": "pages/index/wx",
+        "text": "生活"
+      },
+      {
+        "pagePath": "pages/index/music",
+        "text": "音乐"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

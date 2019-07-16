@@ -1,0 +1,184 @@
+
+.hv {
+	background: red;
+}
+.wx_btn {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: space-around;
+	    -ms-flex-pack: distribute;
+	        justify-content: space-around;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}
+.wx_btn:after {
+	content: "";
+	-webkit-box-flex: 1;
+	-webkit-flex: auto;
+	    -ms-flex: auto;
+	        flex: auto;
+}
+.wx_btn {
+	height: 100px;
+}
+.wx_btn button {
+	width: 60px;
+	height: 30px;
+	padding: 0;
+	margin: 0;
+	line-height: 30px;
+	vertical-align: middle;
+}
+.ti {
+	font-size: 16px;
+	width: 100%;
+	margin-bottom: 15px;
+}
+.tia {
+	text-align: center;
+	font-weight: bold;
+	padding-bottom: 20px;
+}
+.tib {
+	text-align: center;
+}
+.tic {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: space-around;
+	    -ms-flex-pack: distribute;
+	        justify-content: space-around;
+}
+.share {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAPCAQAAACouOyaAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAAAJYAAACWAHFG/vAAAAAHdElNRQfjAQkDEiRa3Y/tAAAA4ElEQVQoz33RPUoDARDF8R+7iUQSIlgoASGlVbQREbSyUOzTWAp6Ci+gvVZ6gpTiAUQ8gJUsFgp+wCp+BiGgxLVYQ6JJ9k0zw/sPDG9CgzTtRMu5DM14FaunQ67HCJWMymurYNK+QKODBGpWzKsak8eIMibsoQHjdsSSgRXbouhwiJ3WBRtaGUBkNWdd4ffcN4/effpWUpPDpU1n3EskbmybU1FWVLDgRSKylO5+SNxZ/pPLrKbIYmd8ktj9F92Ugy7AqS9rffmG3TZwrOmhD2n3IkeuBFkPCz2runY7HPkB7xFYftAep8cAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTktMDEtMDlUMDM6MTg6MzYrMDg6MDCZ83pFAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE5LTAxLTA5VDAzOjE4OjM2KzA4OjAw6K7C+QAAAEN0RVh0c29mdHdhcmUAL3Vzci9sb2NhbC9pbWFnZW1hZ2ljay9zaGFyZS9kb2MvSW1hZ2VNYWdpY2stNy8vaW5kZXguaHRtbL21eQoAAABjdEVYdHN2Zzpjb21tZW50ACBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuNCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIA5Jg+MAAAAYdEVYdFRodW1iOjpEb2N1bWVudDo6UGFnZXMAMaf/uy8AAAAYdEVYdFRodW1iOjpJbWFnZTo6SGVpZ2h0ADI3M6uf0hQAAAAXdEVYdFRodW1iOjpJbWFnZTo6V2lkdGgAMzA3cYC6oAAAABl0RVh0VGh1bWI6Ok1pbWV0eXBlAGltYWdlL3BuZz+yVk4AAAAXdEVYdFRodW1iOjpNVGltZQAxNTQ2OTc1MTE2j1P7zwAAABF0RVh0VGh1bWI6OlNpemUAMzgzMEIj9gkWAAAAYnRFWHRUaHVtYjo6VVJJAGZpbGU6Ly8vaG9tZS93d3dyb290L25ld3NpdGUvd3d3LmVhc3lpY29uLm5ldC9jZG4taW1nLmVhc3lpY29uLmNuL2ZpbGVzLzExNS8xMTU0Nzg4LnBuZ1ajhGcAAAAASUVORK5CYII=) no-repeat center;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.sc {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfjAQkBGinvMa02AAABOklEQVQoz2XRv0uUARzH8dfznD/OBgUJHRp8NIIQ43CoRc+UI4Qmhxw0RGgVFIT+hQahLZdsiAZBUPwxR5yPJ9y1hYM6hL8C0xIHHWrxaTjvQPt8p+/n8+b7HT6Bih54IatF4NSGJbtlOwD1XhlzYMO+RCQrMu+DP2Uobca6Z2qq11Jy8t5qKK+T8u4L3akCaYHIF9PQpahPxorYa00aTftsUUaPkkyNETu+WTCIrG5XRgVoNGzLS9aNiRxLbs1PHUZshu46dOncbZ27cKg5lAj9tvofsOaXkNCZCLOKN+KSd2hzFooNSPlh0nY13jblSCinQKeiHHisJJH46gnoV/QIJsQegsh7c9qvu8mbct3EGwXP1VVf1BoUm5GulFVn3LhjBXuI9Lrnk4/+VgDoMOSpVoETsWXfy/Y/IxRXFRciyYYAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTktMDEtMDlUMDE6MjY6NDErMDg6MDCx5q4rAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE5LTAxLTA5VDAxOjI2OjQxKzA4OjAwwLsWlwAAAEN0RVh0c29mdHdhcmUAL3Vzci9sb2NhbC9pbWFnZW1hZ2ljay9zaGFyZS9kb2MvSW1hZ2VNYWdpY2stNy8vaW5kZXguaHRtbL21eQoAAAAYdEVYdFRodW1iOjpEb2N1bWVudDo6UGFnZXMAMaf/uy8AAAAYdEVYdFRodW1iOjpJbWFnZTo6SGVpZ2h0ADI1NunDRBkAAAAXdEVYdFRodW1iOjpJbWFnZTo6V2lkdGgAMjU2ejIURAAAABl0RVh0VGh1bWI6Ok1pbWV0eXBlAGltYWdlL3BuZz+yVk4AAAAXdEVYdFRodW1iOjpNVGltZQAxNTQ2OTY4NDAxwe1sqwAAABF0RVh0VGh1bWI6OlNpemUANTk2NUJvtq19AAAAYHRFWHRUaHVtYjo6VVJJAGZpbGU6Ly8vaG9tZS93d3dyb290L25ld3NpdGUvd3d3LmVhc3lpY29uLm5ldC9jZG4taW1nLmVhc3lpY29uLmNuL2ZpbGVzLzU1LzU1OTUyOS5wbmffhr8gAAAAAElFTkSuQmCC) no-repeat center;
+	vertical-align: middle;
+}
+.bottom-title {
+	line-height: 60rpx;
+	font-size: 24rpx;
+	padding: 15rpx 0;
+}
+.bottom-content {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	padding: 0 35rpx;
+}
+.bottom-content-box {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	margin-bottom: 15rpx;
+	width: 25%;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.bottom-content-image {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	width: 90rpx;
+	height: 90rpx;
+	overflow: hidden;
+	background: #007aff;
+	-webkit-border-radius: 10rpx;
+	        border-radius: 10rpx;
+}
+.bottom-content-text {
+	font-size: 26rpx;
+	color: #333;
+	margin-top: 10rpx;
+}
+.bottom-btn {
+	height: 90rpx;
+	line-height: 90rpx;
+	border-top: 1px #f5f5f5 solid;
+}
+.bottom-content-image.wx {
+	background: #00ce47;
+}
+.bottom-content-image.qq {
+	background: #00b6f6;
+}
+.bottom-content-image.sina {
+	background: #ff766a;
+}
+.bottom-content-image.copy {
+	background: #07ccd0;
+}
+@font-face {
+	font-family: 'iconfont';
+	/* project id 1028200 */
+	src: url('https://at.alicdn.com/t/font_1028200_47ewtwy4t04.ttf') format('truetype');
+}
+.icon {
+	font-family: 'iconfont';
+	font-size: 40rpx;
+	color: #fff;
+}
+.textFlow {
+	-webkit-animation: textfl 15s linear 0s infinite normal;
+	        animation: textfl 15s linear 0s infinite normal;
+	-webkit-animation-play-state: running;
+	        animation-play-state: running;
+	-webkit-animation-fill-mode: backwards;
+	        animation-fill-mode: backwards;
+	position: relative;
+}
+@-webkit-keyframes textfl {
+0% {
+		bottom: 0;
+}
+100% {
+		bottom: 100%;
+}
+}
+@keyframes textfl {
+0% {
+		bottom: 0;
+}
+100% {
+		bottom: 100%;
+}
+}
+
+page::after{position: fixed;left: -1000px;top: -1000px;content: url(https://cdn.dcloud.net.cn/img/shadow-grey.png)}

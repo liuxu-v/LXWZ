@@ -53,8 +53,17 @@
 
 
 
+
+
+
+
+
+
+
 {
-  components: { uniPopup: uniPopup },
+  components: {
+    uniPopup: uniPopup },
+
 
   onReady: function onReady() {var _this = this;
     uni.request({
@@ -146,6 +155,30 @@
 
     }
   },
+
+  //# ifdef MP - WEIXIN
+  onShareAppMessage: function onShareAppMessage(res) {
+    if (res.from === 'button') {// 来自页面内分享按钮
+      console.log(res.target, " at pages\\index\\wx.vue:152");
+    }
+    return {
+      title: this.wx_detail[this.ii].title,
+      path: this.wx_detail[this.ii].src,
+      imageUrl: this.wx_detail[this.ii].pic,
+      success: function success() {
+        uni.showToast({
+          title: "分享成功" });
+
+        this.showPopupBottomShare = false;
+      },
+      fail: function fail() {
+        uni.showToast({
+          title: "分享失败" });
+
+      } };
+
+  },
+
   methods: {
     sc: function sc() {
       uni.showToast({
@@ -153,9 +186,9 @@
         icon: "none" });
 
     },
-    who: function who(index) {var _this2 = this;
+    who: function who(index) {
       var fs = this.bottomData[index].fangshi;
-      console.log(index, " at pages\\index\\wx.vue:148");
+      console.log(index, " at pages\\index\\wx.vue:181");
       if (index == 2 || index == 3) {
         uni.showToast({
           title: "尚不支持",
@@ -168,85 +201,98 @@
           icon: "none" });
 
       }
-      uni.getStorage({
-        key: 'login_info',
-        success: function success(res) {
-          var a = res.data;
-          if (a.username != null && a.avtarurl != null) {
-            if (fs == "WXSenceTimeline") {
-              uni.share({
-                provider: "weixin",
-                scene: "WXSenceTimeline",
-                type: 0,
-                title: _this2.wx_detail[_this2.ii].title,
-                summary: _this2.wx_detail[_this2.ii].title,
-                href: _this2.wx_detail[_this2.ii].src,
-                imageUrl: _this2.wx_detail[_this2.ii].pic,
-                fail: function fail(err) {
-                  uni.showToast({
-                    title: "分享失败" });
 
-                } });
+      if (fs == "WXSenceTimeline") {
+        // # ifdef APP-PLUS
+        uni.share({
+          provider: "weixin",
+          scene: "WXSenceTimeline",
+          type: 0,
+          title: this.wx_detail[this.ii].title,
+          summary: this.wx_detail[this.ii].title,
+          href: this.wx_detail[this.ii].src,
+          imageUrl: this.wx_detail[this.ii].pic,
+          fail: function fail(err) {
+            uni.showToast({
+              title: "分享失败" });
 
-            }if (fs == "WXSceneSession") {
-              uni.share({
-                provider: "weixin",
-                scene: "WXSceneSession",
-                type: 0,
-                title: _this2.wx_detail[_this2.ii].title,
-                summary: _this2.wx_detail[_this2.ii].title,
-                href: _this2.wx_detail[_this2.ii].src,
-                imageUrl: _this2.wx_detail[_this2.ii].pic,
-                fail: function fail(err) {
-                  uni.showToast({
-                    title: "分享失败" });
+          } });
 
-                } });
+      }
+      if (fs == "WXSceneSession") {
+        uni.share({
+          provider: "weixin",
+          scene: "WXSceneSession",
+          type: 0,
+          title: this.wx_detail[this.ii].title,
+          summary: this.wx_detail[this.ii].title,
+          href: this.wx_detail[this.ii].src,
+          imageUrl: this.wx_detail[this.ii].pic,
+          fail: function fail(err) {
+            uni.showToast({
+              title: "分享失败" });
 
-            }
+          } });
 
-          }
-        },
-        fail: function fail(res) {
-          uni.showModal({
-            title: "登录",
-            content: "登录后才能分享",
-            success: function success(res) {
-              if (res.confirm) {
-                uni.navigateTo({
-                  url: "login" });
+      }
 
-              }
-            } });
 
-        } });
-
+      // uni.getStorage({
+      // 	key: 'login_info',
+      // 	success:(res)=> {
+      // 	var a=res.data				
+      // 	if(a.username!=null&&a.avtarurl!=null){
+      // 		
+      // 		
+      // 	}
+      // },
+      // fail: (res) => {					
+      // 	uni.showModal({
+      // 		title:"登录",
+      // 		content:"登录后才能分享",
+      // 		success: (res) => {
+      // 			if(res.confirm){
+      // 				uni.navigateTo({
+      // 					url:"login",								
+      // 				})
+      // 			}
+      // 		}
+      // 	})
+      // }
+      // 	})
     },
     hidePopup: function hidePopup() {
       this.showPopupBottomShare = false;
     },
-    wx_details: function wx_details(e) {var _this3 = this;
+    wx_details: function wx_details(e) {var _this2 = this;
       var a = e.target.id;
-      console.log(a, " at pages\\index\\wx.vue:220");
+      console.log(a, " at pages\\index\\wx.vue:259");
       uni.request({
         url: 'https://api.jisuapi.com/news/get?channel=' + a + '&start=0&num=10&appkey=b462678ca6c3defb', //仅为示例，并非真实接口地址。   
         success: function success(res) {
-          _this3.wx_detail = res.data.result.list;
-          _this3.dis = "block";
+          _this2.wx_detail = res.data.result.list;
+          _this2.dis = "block";
         } });
 
 
 
     },
     ur: function ur(en) {
-      plus.storage.setItem("xq", en);
-      uni.navigateTo({
-        url: "wx_xq" });
+      uni.setStorage({
+        key: "xq",
+        data: en,
+        success: function success() {
+          uni.navigateTo({
+            url: "wx_xq" });
+
+        } });
+
 
     },
     fx: function fx(i) {
-      this.showPopupBottomShare = true;
       this.ii = i;
+      this.showPopupBottomShare = true;
+
 
 
 
